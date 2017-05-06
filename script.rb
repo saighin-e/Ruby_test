@@ -2,12 +2,6 @@ require 'watir'
 require 'pry-byebug'
 require 'pp'
 
-class User
-	attr_accessor 
-	def initialize()
-	end
-end
-
 #Create a Transaction class that has the following fields:
 
 class Transactions
