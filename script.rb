@@ -52,7 +52,6 @@ browser.execute_script('document.getElementById("owwb_ws_USER_PROPERTY_DATE_FROM
 browser.form(:id, "owwb_ws_serviceRefreshForm").submit()
 
 #Extend your script in such a way that the stored JSON account will contain a list of Transactions. Example of output:
-#until browser.span(:class, "owwb-ws-header-user-name").exists? do sleep 1 end
 browser.lis(:class, "owwb_ws_statementItem owwb_ws_statement_date_item").each do |li|
 	transaction = Transactions.new
 	date = li.div(:class, "owwb-ws-statement-item-date").div(:class, "owwb-cs-has-tooltip").text
